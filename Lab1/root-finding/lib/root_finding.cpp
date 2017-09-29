@@ -25,21 +25,22 @@ double bisection(func f, double a, double b, double eps, int maxIter)
 
 double Newton(func f, func fd, double a, double b, double tolerance, double eps)
 {
-  int x0 = (b - a) / 2, x1;
-  int maxIter = 20;
+  double x0 = (b - a) / 2, x1;
+  int maxIter = 100;
   bool solutionFound = false;
 
   for (int i = 0; i < maxIter; i++)
   {
-    int y = f(x0);
-    int yprime = fd(x0);
+    double y = f(x0);
+    double yprime = fd(x0);
 
-    if (abs(yprime) < eps)
+    if (abs(yprime) < eps) {
       break;
+    }
 
-    int x1 = x0 - y / yprime;
+    x1 = x0 - y / yprime;
 
-    if (abs(x1 - x0) <= tolerance + abs(x1))
+    if (abs(x1 - x0) <= (tolerance + abs(x1)))
     {
       solutionFound = true;
       break;
@@ -51,5 +52,5 @@ double Newton(func f, func fd, double a, double b, double tolerance, double eps)
   if (solutionFound)
     return x1;
   else
-    throw "Did not found solution";
+    throw "Did not find a solution";
 }
