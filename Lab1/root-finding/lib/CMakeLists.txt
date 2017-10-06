@@ -1,11 +1,13 @@
+project(root_finding_lib)
+
 add_library(
-root_finding_lib
-root_finding.cpp root_finding.h)
+  root_finding_lib
+  root_finding.cpp root_finding.h)
 
 get_property(
-LIB_TYPE
-TARGET root_finding_lib
-PROPERTY TYPE)
+  LIB_TYPE
+  TARGET root_finding_lib
+  PROPERTY TYPE)
 
 if(LIB_TYPE STREQUAL SHARED_LIBRARY)
   install(
@@ -32,3 +34,5 @@ install(
   DESTINATION include
   COMPONENT developer
   FILES_MATCHING PATTERN "*.h")
+
+target_include_directories(root_finding_lib INTERFACE)

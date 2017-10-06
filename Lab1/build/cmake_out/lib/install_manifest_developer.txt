@@ -1,0 +1,2 @@
+/home/student/задания/crossplatformappdev/Lab1/cmake_install/lib/libroot_finding_lib.a
+/home/student/задания/crossplatformappdev/Lab1/cmake_install/include/./root_finding.h

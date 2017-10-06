@@ -1,0 +1,7 @@
+/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/lib/CMakeFiles/install.dir
+/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/lib/CMakeFiles/list_install_components.dir
+/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/lib/CMakeFiles/rebuild_cache.dir
+/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/lib/CMakeFiles/root_finding_lib.dir
+/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/lib/CMakeFiles/install/strip.dir
+/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/lib/CMakeFiles/install/local.dir
+/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/lib/CMakeFiles/edit_cache.dir

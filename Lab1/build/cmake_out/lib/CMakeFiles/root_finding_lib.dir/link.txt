@@ -1,0 +1,2 @@
+/usr/bin/ar qc libroot_finding_lib.a  CMakeFiles/root_finding_lib.dir/root_finding.o
+/usr/bin/ranlib libroot_finding_lib.a
