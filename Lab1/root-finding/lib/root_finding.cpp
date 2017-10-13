@@ -23,34 +23,13 @@ double bisection(func f, double a, double b, double eps, int maxIter)
     throw "Max iter exceeded";
 }
 
-double Newton(func f, func fd, double a, double b, double tolerance, double eps)
+double Newton(func f, func fd, double a, double b, double eps)
 {
-  double x0 = (b - a) / 2, x1;
-  int maxIter = 100;
-  bool solutionFound = false;
-
-  for (int i = 0; i < maxIter; i++)
-  {
-    double y = f(x0);
-    double yprime = fd(x0);
-
-    if (abs(yprime) < eps) {
-      break;
-    }
-
-    x1 = x0 - y / yprime;
-
-    if (abs(x1 - x0) <= (tolerance + abs(x1)))
-    {
-      solutionFound = true;
-      break;
-    }
-
+  double x0 = (b - a) * 0.7;
+  double x1  = x0 - f(x0)/fd(x0);
+  while (abs(x1-x0)>eps) {
     x0 = x1;
+    x1 = x1 - f(x1)/fd(x1);
   }
-
-  if (solutionFound)
-    return x1;
-  else
-    throw "Did not find a solution";
+  return x1;
 }

@@ -1,4 +1,4 @@
-out = ../../_out
+out = ../../build/_out
 
 $(out)/main: $(out)/main.o $(out)/root_finding_lib.a
 	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -o $@ $^

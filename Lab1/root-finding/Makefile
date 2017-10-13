@@ -1,5 +1,5 @@
 SUBDIRS = bin lib
-out = ../_out
+out = ../build/_out
 
 .PHONY: subdirs $(SUBDIRS) clean
 
@@ -12,4 +12,4 @@ $(SUBDIRS):
 bin: lib
 
 clean:
-		rm -rf ../_out
+		rm -rf $(out)

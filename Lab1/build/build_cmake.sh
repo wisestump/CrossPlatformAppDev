@@ -7,7 +7,7 @@ cd cmake_out
 mkdir -p lib
 cd lib
 
-cmake -G "Unix Makefiles" -D CMAKE_INSTALL_PREFIX=../../../cmake_install ../../../root-finding/lib
+cmake -G "Unix Makefiles" -D CMAKE_INSTALL_PREFIX=/home/student/.local ../../../root-finding/lib
 make
 cmake -D COMPONENT=developer -P cmake_install.cmake
 

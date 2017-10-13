@@ -1,6 +1,6 @@
 SOURCES = root_finding.cpp
 
-out = ../../_out
+out = ../../build/_out
 
 override CPPFLAGS += -MMD -MP -I include
 
