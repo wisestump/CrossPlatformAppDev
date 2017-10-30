@@ -1,0 +1,2 @@
+/home/student/.local/lib/libroot_finding_lib.a
+/home/student/.local/include/./root_finding.h

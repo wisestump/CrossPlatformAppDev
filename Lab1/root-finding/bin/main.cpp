@@ -36,19 +36,19 @@ double f3d(double x)
 int main()
 {
   std::cout << "First function" << std::endl;
-  std::cout << "bisection: " << bisection(f1, 0, 3) << std::endl;
+  std::cout << "dichotomy: " << bisection(f1, 0, 3) << std::endl;
   std::cout << "newton: " << Newton(f1, f1d, 0, 3) << std::endl;
   std::cout << "chord: " << Chord(f1, 0, 3) << std::endl;
   std::cout << std::endl;
 
   std::cout << "Second function" << std::endl;
-  std::cout << "bisection: " << bisection(f2, 1, 11) << std::endl;
+  std::cout << "dichotomy: " << bisection(f2, 1, 11) << std::endl;
   std::cout << "newton: " << Newton(f2, f2d, 1, 11) << std::endl;
   std::cout << "chord: " << Chord(f2, 1, 11) << std::endl;
   std::cout << std::endl;
 
   std::cout << "Third function" << std::endl;
-  std::cout << "bisection: " << bisection(f3, 0, M_PI / 2) << std::endl;
+  std::cout << "dichotomy: " << bisection(f3, 0, M_PI / 2) << std::endl;
   std::cout << "newton: " << Newton(f3, f3d, 0, M_PI / 2) << std::endl;
   std::cout << "chord: " << Chord(f3, 0, M_PI / 2) << std::endl;
 }

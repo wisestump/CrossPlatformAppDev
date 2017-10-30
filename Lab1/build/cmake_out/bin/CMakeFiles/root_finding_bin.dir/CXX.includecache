@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/student/задания/crossplatformappdev/Lab1/root-finding/bin/main.cpp
+cmath
+-
+iostream
+-
+../lib/root_finding.h
+/home/student/задания/crossplatformappdev/Lab1/root-finding/lib/root_finding.h
+
+/home/student/задания/crossplatformappdev/Lab1/root-finding/lib/root_finding.h
+stdlib.h
+-
+iostream
+-
+cmath
+-
+
