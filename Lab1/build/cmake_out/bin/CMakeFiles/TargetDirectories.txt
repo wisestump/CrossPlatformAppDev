@@ -1,3 +1,0 @@
-/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/bin/CMakeFiles/edit_cache.dir
-/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/bin/CMakeFiles/rebuild_cache.dir
-/home/student/задания/crossplatformappdev/Lab1/build/cmake_out/bin/CMakeFiles/root_finding_bin.dir

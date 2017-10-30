@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/root_finding_bin.dir/main.o  -o root_finding_bin -rdynamic /home/student/.local/lib/libroot_finding_lib.a 
