@@ -27,9 +27,19 @@ double Newton(func f, func fd, double a, double b, double eps)
 {
   double x0 = (a + b) / 2;
   double x1 = x0 - f(x0)/fd(x0);
-  while (abs(x1-x0)>eps) {
+  while (fabs(x1-x0)>eps) {
     x0 = x1;
     x1 = x1 - f(x1)/fd(x1);
   }
   return x1;
+}
+
+double Chord(func f, double a, double b, double eps)
+{
+  while(fabs(b - a) > eps) {
+    a = b - (b - a) * f(b) / (f(b) - f(a));
+    b = a + (a - b) * f(a) / (f(a) - f(b));
+  }
+
+  return b;
 }
