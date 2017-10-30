@@ -1,2 +1,2 @@
-_out
-cmake_out
+/build/_out/
+/build/cmake_out/
