@@ -25,8 +25,8 @@ double bisection(func f, double a, double b, double eps, int maxIter)
 
 double Newton(func f, func fd, double a, double b, double eps)
 {
-  double x0 = (b - a) * 0.7;
-  double x1  = x0 - f(x0)/fd(x0);
+  double x0 = (a + b) / 2;
+  double x1 = x0 - f(x0)/fd(x0);
   while (abs(x1-x0)>eps) {
     x0 = x1;
     x1 = x1 - f(x1)/fd(x1);
