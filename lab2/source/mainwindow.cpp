@@ -6,19 +6,21 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    didInit = false;
+    pixmap = NULL;
     initParameters();
     radiusEps = 0.0001;
 
     scene = new QGraphicsScene(this);
 
-    QHBoxLayout *layout = new QHBoxLayout;
-    layout->addWidget(ui->parametersDockWidget);
+    //QHBoxLayout *layout = new QHBoxLayout;
+    //layout->addWidget(ui->parametersDockWidget);
     QGraphicsView *view = new QGraphicsView(scene);
-    layout->addWidget(view);
+    //layout->addWidget(view);
 
-    QWidget *widget = new QWidget;
-    widget->setLayout(layout);
-    setCentralWidget(widget);
+    //QWidget *widget = new QWidget;
+    //widget->setLayout(layout);
+    setCentralWidget(view);
 
     didInit = true;
     repaint();
@@ -54,8 +56,8 @@ void MainWindow::repaint()
 
 void MainWindow::initParameters()
 {
-    R = 50; r = 30; d = 10;
-    theta = 200; delta = 0.3f;
+    R = 250; r = 120; d = 50;
+    theta = 200; delta = 0.001f;
 
     ui->doubleSpinBoxOuterR->setValue(R);
     ui->doubleSpinBoxInnerR->setValue(r);
@@ -94,4 +96,21 @@ void MainWindow::on_doubleSpinBoxDelta_valueChanged(double arg1)
 {
     delta = arg1;
     repaint();
+}
+
+void MainWindow::on_actionExit_triggered()
+{
+    QApplication::exit();
+}
+
+void MainWindow::on_actionInput_Data_triggered()
+{
+    ui->parametersDockWidget->show();
+}
+
+
+
+void MainWindow::on_actionAbout_triggered()
+{
+    QMessageBox::about(this, "About", "This application renders so called hypotrochoids. These are the curves being drawn by spirographs.");
 }

@@ -6,6 +6,7 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsView>
 #include <QPainter>
+#include <QMessageBox>
 #include <cmath>
 
 namespace Ui {
@@ -31,19 +32,25 @@ private slots:
 
     void on_doubleSpinBoxDelta_valueChanged(double arg1);
 
+    void on_actionExit_triggered();
+
+    void on_actionInput_Data_triggered();
+
+    void on_actionAbout_triggered();
+
 private:
     void repaint();
     void initParameters();
 
     QGraphicsScene *scene;
-    QGraphicsItem *pixmap = NULL;
+    QGraphicsItem *pixmap;
     Ui::MainWindow *ui;
 
     float R, r, d;
     float theta, delta;
     float radiusEps;
 
-    bool didInit = false;
+    bool didInit;
 };
 
 #endif // MAINWINDOW_H

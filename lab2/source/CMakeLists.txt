@@ -6,7 +6,7 @@ set (CMAKE_AUTOMOC ON)
 set (CMAKE_AUTOUIC ON)
 set (CMAKE_CXX_STANDARD 11)
 
-#set( ENV{PATH} "G:/ProgramFiles/Qt/5.5/mingw492_32;G:/ProgramFiles/Qt/Tools/mingw492_32/bin" )
+set( ENV{PATH} "G:/ProgramFiles/Qt/5.5/mingw492_32;G:/ProgramFiles/Qt/Tools/mingw492_32/bin" )
 set (CMAKE_PREFIX_PATH "G:/ProgramFiles/Qt/5.5/mingw492_32/")
 include_directories (
 "G:/ProgramFiles/Qt/Tools/mingw492_32/i686-w64-mingw32/include/c++/" 
