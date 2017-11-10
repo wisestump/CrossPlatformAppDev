@@ -8,5 +8,5 @@ set (CMAKE_CXX_STANDARD 11)
 project(hypotrochoid)
 
 find_package(Qt5Widgets REQUIRED)
-add_executable(hypotrochoid WIN32 main.cpp mainwindow.cpp)
+add_executable(hypotrochoid WIN32 main.cpp mainwindow.cpp PixWidget.cpp)
 target_link_libraries(hypotrochoid Qt5::Widgets)

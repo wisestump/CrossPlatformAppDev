@@ -9,6 +9,8 @@
 #include <QMessageBox>
 #include <cmath>
 
+#include "PixWidget.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -42,12 +44,9 @@ private:
     void repaint();
     void initParameters();
 
-    QGraphicsScene *scene;
-    QGraphicsItem *pixmap;
+    PixWidget *pixWidget;
     Ui::MainWindow *ui;
 
-    float R, r, d;
-    float theta, delta;
     float radiusEps;
 
     bool didInit;
