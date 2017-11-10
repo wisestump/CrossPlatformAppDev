@@ -1,7 +1,7 @@
 mkdir -p cmake_out && cd cmake_out
 
-cmake -G "MinGW Makefiles" ../../source
+cmake -G "Unix Makefiles" ../../source
 
-mingw32-make
+make
 
 cd ../
