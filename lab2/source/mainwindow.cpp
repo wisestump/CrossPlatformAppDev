@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     radiusEps = 0.0001;
 
     setCentralWidget(pixWidget);
+    ui->formLayout->setColumnMinimumWidth(1, 300);
 }
 
 MainWindow::~MainWindow()

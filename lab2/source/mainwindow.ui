@@ -60,7 +60,7 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>160</width>
+     <width>200</width>
      <height>200</height>
     </size>
    </property>
@@ -82,11 +82,11 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>138</width>
+       <width>180</width>
        <height>126</height>
       </rect>
      </property>
-     <layout class="QFormLayout" name="formLayout">
+     <layout class="QGridLayout" name="formLayout">
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">

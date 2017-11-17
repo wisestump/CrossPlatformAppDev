@@ -26,7 +26,7 @@ private:
   float R, r, d;
   float theta, delta;
 
-  void repaint();
+  void repaint(const QSize &size);
 };
 
 #endif //PIXWIDGET_H
