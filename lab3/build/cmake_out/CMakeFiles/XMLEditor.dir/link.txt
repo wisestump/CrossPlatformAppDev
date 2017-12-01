@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/XMLEditor.dir/main.cpp.o CMakeFiles/XMLEditor.dir/mainwindow.cpp.o CMakeFiles/XMLEditor.dir/XMLEditor_automoc.cpp.o  -o XMLEditor -rdynamic /opt/anaconda3/lib/libQt5Widgets.so.5.6.2 /opt/anaconda3/lib/libQt5Gui.so.5.6.2 /opt/anaconda3/lib/libQt5Core.so.5.6.2 -Wl,-rpath,/opt/anaconda3/lib 

@@ -1,4 +1,0 @@
-/home/student/задания/crossplatformappdev/lab3/build/cmake_out/CMakeFiles/edit_cache.dir
-/home/student/задания/crossplatformappdev/lab3/build/cmake_out/CMakeFiles/rebuild_cache.dir
-/home/student/задания/crossplatformappdev/lab3/build/cmake_out/CMakeFiles/XMLEditor.dir
-/home/student/задания/crossplatformappdev/lab3/build/cmake_out/CMakeFiles/XMLEditor_automoc.dir
