@@ -8,5 +8,6 @@ set (CMAKE_CXX_STANDARD 11)
 project(XMLEditor)
 
 find_package(Qt5Widgets REQUIRED)
-add_executable(XMLEditor WIN32 main.cpp mainwindow.cpp)
+add_executable(XMLEditor WIN32
+main.cpp mainwindow.cpp xmlmodel.cpp xmlserialization.cpp xmlnode.cpp)
 target_link_libraries(XMLEditor Qt5::Widgets)
