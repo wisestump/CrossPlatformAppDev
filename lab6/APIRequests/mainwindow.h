@@ -29,9 +29,9 @@ private:
     Ui::MainWindow *ui;
     QNetworkAccessManager *netManager;
     RequestFactory requestFactory;
-    QNetworkReply *reply;
+    QNetworkReply *reply = NULL;
     CommitDeserializer *deserializer;
-    CommitTableModel *model;
+    CommitTableModel *model = NULL;
 };
 
 #endif // MAINWINDOW_H

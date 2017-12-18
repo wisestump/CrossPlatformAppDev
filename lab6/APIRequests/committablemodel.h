@@ -21,7 +21,7 @@ struct CommitInfo
 class CommitDeserializer
 {
 public:
-    QList<CommitInfo> deserializeCommits(QString commits);
+    QList<CommitInfo> deserializeCommits(QByteArray commits);
     CommitInfo deserilizeCommit(QJsonObject object);
 };
 

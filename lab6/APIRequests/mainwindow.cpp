@@ -21,9 +21,9 @@ MainWindow::~MainWindow()
 void MainWindow::replyFinished()
 {
     //qDebug() << reply->readAll();
-    QList<CommitInfo> commits = deserializer->deserializeCommits(QString(reply->readAll()));
+    QList<CommitInfo> commits = deserializer->deserializeCommits(reply->readAll());
 
-    if (!model)
+    if (model)
         delete model;
 
     model = new CommitTableModel(commits);
@@ -37,6 +37,9 @@ void MainWindow::replyError(QNetworkReply::NetworkError code)
 
 void MainWindow::on_requestButton_clicked()
 {
+    if (reply)
+        delete reply;
+
     reply = netManager->get(requestFactory.getRequest(ui->urlLineEdit->text()));
     connect(reply, SIGNAL(readyRead()), this, SLOT(replyFinished()));
 }

@@ -1,10 +1,10 @@
 #include "committablemodel.h"
 
-
-QList<CommitInfo> CommitDeserializer::deserializeCommits(QString commits)
+QList<CommitInfo> CommitDeserializer::deserializeCommits(QByteArray commits)
 {
     QList<CommitInfo> result = QList<CommitInfo>();
-    QJsonArray jsonResponse = QJsonDocument::fromJson(commits.toUtf8()).array();
+    QJsonArray jsonResponse = QJsonDocument::fromJson(QString(commits).toUtf8()).array();
+    //<< jsonResponse;
     foreach (QJsonValue value, jsonResponse)
         result.append(this->deserilizeCommit(value.toObject()));
 
@@ -59,7 +59,7 @@ QVariant CommitTableModel::headerData(int section, Qt::Orientation orientation, 
         if (orientation == Qt::Horizontal) {
             switch (section) {
             case 0:
-                return "Sha";
+                return "SHA";
             case 1:
                 return "Message";
             case 2:
