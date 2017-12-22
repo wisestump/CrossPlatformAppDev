@@ -1,0 +1,4 @@
+/home/student/задания/crossplatformappdev/lab7/build/cmake_out/CMakeFiles/rebuild_cache.dir
+/home/student/задания/crossplatformappdev/lab7/build/cmake_out/CMakeFiles/edit_cache.dir
+/home/student/задания/crossplatformappdev/lab7/build/cmake_out/CMakeFiles/QMLFileBrowser.dir
+/home/student/задания/crossplatformappdev/lab7/build/cmake_out/CMakeFiles/QMLFileBrowser_automoc.dir
