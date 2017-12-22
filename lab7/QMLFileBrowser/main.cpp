@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include <QQuickView>
+//#include <QQuickView>
 #include <QQmlContext>
 
 #include "filesystem.h"
@@ -30,4 +30,3 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
-
