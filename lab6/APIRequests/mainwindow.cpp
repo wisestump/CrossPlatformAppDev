@@ -41,5 +41,5 @@ void MainWindow::on_requestButton_clicked()
         delete reply;
 
     reply = netManager->get(requestFactory.getRequest(ui->urlLineEdit->text()));
-    connect(reply, SIGNAL(readyRead()), this, SLOT(replyFinished()));
+    connect(reply, SIGNAL(finished()), this, SLOT(replyFinished()));
 }

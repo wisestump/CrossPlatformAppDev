@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include <QQuickView>
+//#include <QQuickView>
 #include <QQmlContext>
 #include <QDirModel>
 
@@ -34,4 +34,3 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
-

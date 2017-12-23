@@ -1,10 +1,12 @@
 #include "committablemodel.h"
+#include <QDebug>
 
 QList<CommitInfo> CommitDeserializer::deserializeCommits(QByteArray commits)
 {
+    qDebug() << commits.count();
     QList<CommitInfo> result = QList<CommitInfo>();
     QJsonArray jsonResponse = QJsonDocument::fromJson(QString(commits).toUtf8()).array();
-    //<< jsonResponse;
+    qDebug() << jsonResponse.count();
     foreach (QJsonValue value, jsonResponse)
         result.append(this->deserilizeCommit(value.toObject()));
 
