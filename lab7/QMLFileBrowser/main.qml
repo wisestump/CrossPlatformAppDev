@@ -1,66 +1,76 @@
 import QtQuick 2.2
 import QtQuick.Controls 1.4
 import QtQml.Models 2.2
+import QtQuick.Layouts 1.1
 
 ApplicationWindow {
     width: 500; height: 500
     visible: true
+    property var treeRoot: tableFileSystemModel.index(0, 0);
 
-    ItemSelectionModel {
-        id: sel
-        model: treeFileSystemModel
-        onSelectionChanged: {
-            console.log("selected", selected)
-            console.log("deselected", deselected)
-        }
-        onCurrentChanged: console.log("current", current)
-    }
+    ColumnLayout {
 
-    SplitView {
         anchors.fill: parent
 
-        TreeView {
-            id: treeView;
-            selection: sel
+        Button {
+            height: 50; width: 150
+            text: "Up";
 
-            TableViewColumn {
-                title: "Name"
-                role: "fileName"
-                width: 300
+            onClicked: {
+                tableView.model.rootIndex = tableView.model.parentModelIndex();
             }
-            TableViewColumn {
-                title: "Permissions"
-                role: "filePermissions"
-                width: 100
-            }
-
-            model: treeFileSystemModel
         }
 
-        TableView {
-            id: tableView;
-//            Layout.fillWidth: true
-//            Layout.preferredWidth: 500
-//            Layout.preferredHeight: 500
 
-            TableViewColumn {
-                title: "Name"
-                role: "fileName"
-                width: 300
+        SplitView {
+            //anchors.fill: parent
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+            TableView {
+                id: tableView;
+
+                TableViewColumn {
+                    title: "Name"
+                    role: "fileName"
+                    width: 300
+                }
+
+                model: DelegateModel {
+                    model: tableFileSystemModel
+
+
+                    delegate: Rectangle {
+                        width: 200; height: 25
+                        Text { text: fileName }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onDoubleClicked: {
+                                if (model.hasModelChildren)
+                                    tableView.model.rootIndex = tableView.model.modelIndex(index)
+                            }
+                        }
+                    }
+                }
             }
-            TableViewColumn {
-                title: "Permissions"
-                role: "filePermissions"
-                width: 100
+
+            TreeView {
+                id: treeView;
+
+                TableViewColumn {
+                    title: "Name"
+                    role: "fileName"
+                    width: 300
+                }
+                TableViewColumn {
+                    title: "Permissions"
+                    role: "filePermissions"
+                    width: 100
+                }
+
+                model: treeFileSystemModel
             }
-//            onDoubleClicked: {
-//                var curIndex = this.currentRow;
-//                rootIndex: treeFileSystemModel.changeDir(curIndex);
-//            }
-            onClicked: {
-                treeView.rootIndex = treeFileSystemModel.getIndex(this.currentRow);
-            }
-            model: treeFileSystemModel
         }
     }
 }
